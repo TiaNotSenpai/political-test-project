@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test di Posizionamento Politico</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.png" type="image/png"> <!-- Aggiungi un tuo favicon.png in /img -->
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Test di Posizionamento Politico</h1>
+            <p>Scopri il tuo orientamento nello spettro politico italiano.</p>
+        </div>
+        <nav>
+            <button id="btn-home" title="Torna alla selezione del test" style="display: none;">Home</button>
+        </nav>
+    </header>
+
+    <main id="app-container">
+        <section id="intro-sezione" class="active-section">
+            <h2>Benvenuto/a al Test di Posizionamento Politico</h2>
+            <p>Questo strumento è stato creato per aiutarti a esplorare le tue convinzioni e a comprendere come si collocano rispetto alle posizioni dei principali partiti politici in Italia e su alcuni assi tematici fondamentali.</p>
+            <p>Rispondi sinceramente alle domande per ottenere il profilo più rappresentativo possibile.</p>
+            <p class="warning"><strong>Disclaimer e Istruzioni:</strong> Le domande e le posizioni dei partiti qui presentate sono frutto di un'elaborazione e simulazione interna e mirano a fornire un'indicazione generale. La complessità del panorama politico reale richiede approfondimenti individuali. Questo test non ha valore scientifico assoluto ma è uno strumento di riflessione.
+            <br>Per le domande che presentano due opzioni separate da una "o" (es. "Opzione A o Opzione B?"), esprimi il tuo grado di accordo o disaccordo con il principio generale o l'idea che almeno una delle due soluzioni sia desiderabile/indesiderabile.</p>
+            <h3>Scegli la profondità del test:</h3>
+            <div class="test-selection-buttons">
+                <button id="btn-test-breve">Test Rapido <small>(35 domande mirate)</small></button>
+                <button id="btn-test-lunga">Test Completo <small>(80 domande dettagliate)</small></button>
+            </div>
+        </section>
+
+        <section id="sezione-test" class="hidden-section">
+            <h2 id="titolo-test"></h2>
+            <div id="progresso-container">
+                <span id="progresso-testo">Domanda <span id="domanda-corrente"></span> di <span id="domande-totali"></span></span>
+                <div id="barra-progresso">
+                    <div id="barra-progresso-fill"></div>
+                </div>
+            </div>
+            <div id="domanda-card">
+                <p id="testo-domanda"></p>
+                <div id="tema-domanda-container">
+                    Tema: <span id="tema-domanda"></span>
+                </div>
+                <div id="opzioni-risposta-container">
+                    <!-- Opzioni caricate da JS -->
+                </div>
+            </div>
+            <div class="navigation-buttons">
+                <button id="btn-indietro" disabled>Indietro</button>
+                <button id="btn-avanti" disabled>Avanti / Vedi Risultati</button>
+            </div>
+        </section>
+
+        <section id="risultati-sezione" class="hidden-section">
+            <h2>Il Tuo Profilo Politico Indicativo</h2>
+            <div id="definizione-politica-card">
+                <h3>Sintesi del Tuo Orientamento</h3>
+                <p id="etichetta-definizione-generale"></p>
+                <div id="assi-politici-container">
+                    <h4>Posizionamento sugli Assi Tematici:</h4>
+                    <p id="asse-economico-risultato"></p>
+                    <p id="asse-sociale-risultato"></p>
+                    <p id="asse-europeo-risultato"></p>
+                    <p id="asse-ambientale-risultato"></p>
+                </div>
+                <p id="descrizione-profilo-dettagliata"></p>
+            </div>
+
+            <div id="vicinanza-partiti-card">
+                <h3>Affinità con i Partiti Politici</h3>
+                <div id="vicinanza-partiti-container">
+                    <!-- Risultati caricati da JS -->
+                </div>
+            </div>
+            <button id="btn-rifai-test">Rifai il Test</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="current-year"></span> Test di Posizionamento Politico. Creato a scopo illustrativo e di riflessione.</p>
+        <p>I loghi dei partiti sono marchi registrati dei rispettivi proprietari. L'eventuale uso è puramente informativo.</p>
+    </footer>
+
+    <script src="js/database.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
