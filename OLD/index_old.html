@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Politico Italiano</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Test Politico Italiano</h1>
+        <p>Scopri la tua vicinanza ai partiti politici italiani.</p>
+        <p class="warning"><strong>Attenzione:</strong> Le posizioni dei partiti e le domande in questo test sono a scopo illustrativo. Per risultati accurati, sarebbe necessaria un'analisi approfondita dei programmi reali.</p>
+    </header>
+
+    <main id="app-container">
+        <section id="selezione-test" class="active-section">
+            <h2>Scegli la versione del test:</h2>
+            <button id="btn-test-breve">Versione Breve (35 domande)</button>
+            <button id="btn-test-lunga">Versione Lunga (80 domande)</button>
+        </section>
+
+        <section id="sezione-test" class="hidden-section">
+            <h2 id="titolo-test"></h2>
+            <div id="progresso-container">
+                Domanda <span id="domanda-corrente"></span> di <span id="domande-totali"></span>
+                <div id="barra-progresso">
+                    <div id="barra-progresso-fill"></div>
+                </div>
+            </div>
+            <div id="domanda-container">
+                <p id="testo-domanda"></p>
+                <div id="opzioni-risposta-container">
+                    <!-- Le opzioni di risposta verranno caricate qui da JS -->
+                </div>
+            </div>
+            <div class="navigation-buttons">
+                <button id="btn-indietro" disabled>Indietro</button>
+                <button id="btn-avanti" disabled>Avanti / Vedi Risultati</button>
+            </div>
+        </section>
+
+        <section id="risultati-sezione" class="hidden-section">
+            <h2>I Tuoi Risultati</h2>
+            <div id="definizione-politica-utente">
+                <h3>La tua Posizione Generale:</h3>
+                <p id="etichetta-definizione"></p>
+                <div class="political-compass-placeholder">
+                     <p id="compass-text-placeholder">(La tua posizione generale sarà descritta qui)</p>
+                </div>
+            </div>
+            <div id="vicinanza-partiti-container">
+                <h3>Vicinanza ai Partiti (%):</h3>
+                <!-- I risultati verranno caricati qui da JS -->
+            </div>
+            <button id="btn-rifai-test">Rifai il Test</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Test Politico Italiano - Contenuti politici a scopo illustrativo.</p>
+    </footer>
+
+    <script src="js/database.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
